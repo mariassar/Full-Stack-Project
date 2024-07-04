@@ -1,5 +1,5 @@
-## What Changed
-###CV-429070 - add ListAuditLog rpc to UserActivityConnectorService(#3214)
+# What Changed
+### CV-429070 - add ListAuditLog rpc to UserActivityConnectorService(#3214)
 # Changes
 
 - add ListAuditLog rpc to UserActivityConnectorService
@@ -10,7 +10,7 @@
 
 [CV-429070]: https://chesscom.atlassian.net/browse/CV-429070?atlOrigin=eyJpIjoiNWRkNTljNzYxNjVmNDY3MDlhMDU5Y2ZhYzA5YTRkZjUiLCJwIjoiZ2l0aHViLWNvbS1KU1cifQ
 
-## Installation-puzzles@9.0.0
+# Installation-puzzles@9.0.0
 
 ### JavaScript
 
@@ -72,7 +72,7 @@ Install via composer.json:
 
 
 
-## Installation-java@9.0.0
+# Installation-java@9.0.0
 
 ### JavaScript
 
@@ -131,5 +131,4 @@ Install via composer.json:
   ]
 }
 ```
-
 
