@@ -13,8 +13,6 @@ jobs:
         - name: Say hello
           run: echo "Hello, world!"
 
-          name: Slack Notification
-
   slack-notify:
     needs: [run]
     if: ${{ always() && needs.run.result == 'pending' }}
