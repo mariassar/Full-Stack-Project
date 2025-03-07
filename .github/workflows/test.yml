@@ -15,7 +15,7 @@ jobs:
           run: echo "Hello, world!"
 
   slack-notify:
-    if ${{enviroment =="" mariheart"}}:
+    if: ${{enviroment == 'mariheart'}}
     runs-on: ubuntu-latest
     steps:
         - name: "Report build errors to #social"
