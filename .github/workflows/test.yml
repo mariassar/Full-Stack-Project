@@ -1,8 +1,8 @@
 name: Reusable Pulumi run
 
 on:
- pull_request:
- deploy:
+ pull_request: {}
+ deployment:
   environment:
     name: mariheart"
 
