@@ -1,0 +1,22 @@
+name: Deploy
+
+on:
+  deployment
+
+jobs:
+  run:
+  # get all the workflow runs and check which status is pending and paste that workflow run link in the slack message
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Report build errors to #social"
+        uses: rtCamp/action-slack-notify@v2
+        env:
+            SLACK_WEBHOOK: ${{ secrets.SLACK_GLOBAL_WEBHOOK }}
+            SLACK_CHANNEL: social
+            SLACK_USERNAME: Definitions Bot
+            SLACK_ICON_EMOJI: ":x:"
+            SLACK_COLOR: "#FF0000"
+            SLACK_TITLE: "Deployment Review requested"
+            SLACK_FOOTER: "" 
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
