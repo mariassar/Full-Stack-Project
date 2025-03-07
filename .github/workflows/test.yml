@@ -1,0 +1,15 @@
+name: Reusable Pulumi run
+
+on:
+ push:
+    branches:
+      - main
+
+jobs:
+  run:
+    environment: mariheart
+    runs-on: ubuntu-latest
+    steps:
+        - name: Say hello
+          run: echo "Hello, world!"
+        #
