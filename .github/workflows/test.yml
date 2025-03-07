@@ -2,8 +2,9 @@ name: Reusable Pulumi run
 
 on:
  pull_request:
-   branches:
-     - main
+ deploy:
+  environment:
+    name: mariheart"
 
 jobs:
   run:
@@ -14,8 +15,7 @@ jobs:
           run: echo "Hello, world!"
 
   slack-notify:
-    needs: [run]
-    if: ${{ always() && needs.run.result == 'pending' }}
+    if ${{enviroment =="" mariheart"}}:
     runs-on: ubuntu-latest
     steps:
         - name: "Report build errors to #social"
