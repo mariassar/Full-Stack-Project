@@ -8,6 +8,11 @@ jobs:
   # get all the workflow runs and check which status is pending and paste that workflow run link in the slack message
     runs-on: ubuntu-latest
     steps:
+      - name: Get url
+        id: get_url
+        run: |
+          sleep 40
+          echo "::set-output name=URL::$(echo $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)"
       - name: "Report build errors to #social"
         uses: rtCamp/action-slack-notify@v2
         env:
