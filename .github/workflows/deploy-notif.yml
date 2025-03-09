@@ -26,3 +26,4 @@ jobs:
             SLACK_FOOTER: "" 
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
