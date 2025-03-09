@@ -1,7 +1,7 @@
 name: Deploy
 
 on:
-  deployment
+  deployment_status
 
 jobs:
   run:
@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get url
+        if: ${{ github.event.deployment_status.state == 'pending' }}
         id: get_url
         run: |
           sleep 40
